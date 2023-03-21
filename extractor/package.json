@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@noble/bls12-381": "^1.4.0"
+  }
+}

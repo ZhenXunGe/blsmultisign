@@ -21,10 +21,13 @@ int zkmain() {
     };
     g2[32] = 0;
 
-    for (int i=0; i<96; i++) {
-	gt[i] = wasm_input(0);
-    };
+
+    // Aggregate the sum of the pubkey
     blssum(len, g1, gsum);
-    blspair(g1, g2, gt);
+
+    for (int i=0; i<96; i++) {
+	    gt[i] = wasm_input(0);
+    };
+    blspair(gsum, g2, gt);
     return 1;
 }
